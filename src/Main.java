@@ -9,6 +9,7 @@ public class Main {
 	    int number=0;                           // 入力数
 	    int count;
 
+	    try{
 	    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("1から100までの間だよ。");
 
@@ -22,6 +23,9 @@ public class Main {
             System.out.println("もっと下だよ。");
         }
         System.out.println("当たり！！  "+count+"回でした。");
-	}
 
+	    }catch(NumberFormatException e){
+	    	System.err.println("数字以外はだめ");
+	    }
+	}
 }
